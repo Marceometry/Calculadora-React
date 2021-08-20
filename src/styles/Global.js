@@ -12,6 +12,21 @@ const GlobalStyles = createGlobalStyle`
         font: 400 1rem sans-serif;
         color: var(--font-color);
         background: var(--background);
+        transition: all .2s;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+        transition: filter .2s;
+
+        &:hover {
+            filter: brightness(.8);
+        }
     }
 `
 

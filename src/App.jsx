@@ -4,8 +4,10 @@ import { ToggleTheme } from './components/ToggleTheme'
 
 import { ThemeProvider } from 'styled-components'
 import { themes } from './styles/themes'
+
 import Colors from './styles/Colors'
 import GlobalStyles from './styles/Global'
+import FontStyles from './styles/Fonts'
 
 export default function App() {
   const [currentTheme, setCurrentTheme] = useState('dark')
@@ -16,6 +18,7 @@ export default function App() {
       <Calculator />
       
       <Colors />
+      <FontStyles />
       <GlobalStyles />
     </ThemeProvider>
   )
