@@ -7,7 +7,7 @@ import { themes } from './styles/themes'
 import Colors from './styles/Colors'
 import GlobalStyles from './styles/Global'
 
-function App() {
+export default function App() {
   const [currentTheme, setCurrentTheme] = useState('dark')
   
   return (
@@ -20,5 +20,3 @@ function App() {
     </ThemeProvider>
   )
 }
-
-export default App
