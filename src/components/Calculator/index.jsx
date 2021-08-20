@@ -1,7 +1,12 @@
+import { Keyboard } from '../Keyboard'
+import CalculatorContainer from './styles'
+
 export function Calculator() {
     return (
-        <main>
+        <CalculatorContainer>
             <h1>Calculadora</h1>
-        </main>
+
+            <Keyboard />
+        </CalculatorContainer>
     )
 }
