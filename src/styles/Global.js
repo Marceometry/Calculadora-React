@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
         height: 100vh;
         font: 400 1rem sans-serif;
         color: var(--font-color);
-        background: var(--background);
+        background: var(--body-background);
         transition: all .2s;
 
         display: flex;

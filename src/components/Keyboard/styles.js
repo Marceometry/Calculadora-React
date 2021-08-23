@@ -11,6 +11,10 @@ const StyledKeyboard = styled.main`
         display: grid;
         align-items: center;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        &:last-child {
+            grid-template-columns: 1fr 1fr 2fr;
+        }
     }
 
     button {
@@ -18,7 +22,11 @@ const StyledKeyboard = styled.main`
         font-size: 2rem;
         text-align: center;
         border-radius: 8px;
-        background: #202020;
+        background: var(--background);
+
+        &.coloured {
+            color: var(--green);
+        }
     }
 `
 
