@@ -7,8 +7,8 @@ export const themes = {
     },
     light: {
         fontColor: '#303030',
-        background: '#FFFFFF',
-        bodyBackground: '#E0E0E0',
+        background: '#F5F5F5',
+        bodyBackground: '#D7D7D7',
         green: '#41ce24',
     }
 }
