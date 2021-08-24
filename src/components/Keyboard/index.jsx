@@ -1,3 +1,4 @@
+import { Backspace } from '../../assets/Backspace'
 import { useCalculator } from '../../contexts/CalculatorContext'
 import { InputButton } from './InputButton'
 import StyledKeyboard from './styles'
@@ -11,7 +12,7 @@ export function Keyboard() {
                 <button onClick={clearScreen} className="coloured">C</button>
                 <InputButton className="coloured">/</InputButton>
                 <InputButton className="coloured">x</InputButton>
-                <button onClick={deleteLastCharacter} className="coloured">{'<-'}</button>
+                <button onClick={deleteLastCharacter} className="coloured"><Backspace /></button>
             </div>
             
             <div className="grid row">
