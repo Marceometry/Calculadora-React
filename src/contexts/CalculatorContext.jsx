@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react"
+import { handleDeleteLast } from "../utils/handleDeleteLast"
 import { handleInput } from '../utils/handleInput'
 
 export const CalculatorContext = createContext({})
@@ -12,12 +13,8 @@ export function CalculatorContextProvider({ children }) {
     }
 
     function deleteLastCharacter() {
-        const newScreenValue = screenValue.reduce((array, character, index) => {
-            if (index === screenValue.length - 1) return array
-            return array = [...array, character]
-        }, [])
-
-        setScreenValue([...newScreenValue])
+        const newScreenValue = handleDeleteLast(screenValue)
+        newScreenValue && setScreenValue(newScreenValue)
     }
 
     function clearScreen() {
