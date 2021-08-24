@@ -1,39 +1,43 @@
+import { useCalculator } from '../../contexts/CalculatorContext'
+import { InputButton } from './InputButton'
 import StyledKeyboard from './styles'
 
 export function Keyboard() {
+    const { clearScreen, deleteLastCharacter } = useCalculator()
+
     return (
         <StyledKeyboard>
             <div className="grid top">
-                <button className="coloured">C</button>
-                <button className="coloured">-+</button>
-                <button className="coloured">%</button>
-                <button className="coloured">/</button>
+                <button onClick={clearScreen} className="coloured">C</button>
+                <InputButton className="coloured">/</InputButton>
+                <InputButton className="coloured">x</InputButton>
+                <button onClick={deleteLastCharacter} className="coloured">{'<-'}</button>
             </div>
             
             <div className="grid row">
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button className="coloured">x</button>
+                <InputButton>7</InputButton>
+                <InputButton>8</InputButton>
+                <InputButton>9</InputButton>
+                <InputButton className="coloured">+</InputButton>
             </div>
             
             <div className="grid row">
-                <button>4</button>
-                <button>5</button>
-                <button>5</button>
-                <button className="coloured">–</button>
+                <InputButton>4</InputButton>
+                <InputButton>5</InputButton>
+                <InputButton>6</InputButton>
+                <InputButton className="coloured">–</InputButton>
             </div>
 
             <div className="grid row">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button className="coloured">+</button>
+                <InputButton>1</InputButton>
+                <InputButton>2</InputButton>
+                <InputButton>3</InputButton>
+                <InputButton className="coloured">-+</InputButton>
             </div>
 
             <div className="grid bottom">
-                <button>.</button>
-                <button>0</button>
+                <InputButton>.</InputButton>
+                <InputButton>0</InputButton>
                 <button className="coloured">=</button>
             </div>
         </StyledKeyboard>
