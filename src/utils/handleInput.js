@@ -6,7 +6,7 @@ export function handleInput(value, currentValue) {
 
     if (isNan(value)) {
         if (isNan(lastCharacter) || lastCharacter === ' ') return
-        if (value !== '.') return [...currentValue, ' ', value, ' ']
+        if (value !== '.') return [...currentValue, ` ${value} `]
     }
 
     return [...currentValue, value]
