@@ -24,7 +24,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-<!-- <h4> Acesse em: https://calculadora-react.vercel.app </h4> -->
+<h4> Acesse em: https://calculadora-react.vercel.app </h4>
 
 Este projeto é um app de calculadora simples para praticar React e Styled-Components.
 
