@@ -31,6 +31,7 @@
     ]
   },
   "devDependencies": {
+    "react-is": "^17.0.2",
     "typescript": "^4.3.5"
   }
 }
