@@ -27,6 +27,10 @@ const GlobalStyles = createGlobalStyle`
         &:hover {
             filter: brightness(.8);
         }
+
+        &:focus {
+            outline: 1px solid var(--green);
+        }
     }
 `
 
