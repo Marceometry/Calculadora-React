@@ -1,11 +1,18 @@
-import { createContext, useContext, useState } from "react"
-import { handleDeleteLast } from "../utils/handleDeleteLast"
+import { createContext, useContext, useState } from 'react'
+import { handleDeleteLast } from '../utils/handleDeleteLast'
+import { handleCalculate } from '../utils/handleCalculate'
 import { handleInput } from '../utils/handleInput'
 
 export const CalculatorContext = createContext({})
 
 export function CalculatorContextProvider({ children }) {
     const [screenValue, setScreenValue] = useState('')
+
+    function calculate() {
+        const result = handleCalculate(screenValue)
+        const newScreenValue = String(result())
+        newScreenValue && setScreenValue([...newScreenValue])
+    }
 
     function handleInputChange(value) {
         const newScreenValue = handleInput(value, screenValue)
@@ -26,7 +33,8 @@ export function CalculatorContextProvider({ children }) {
             screenValue,
             handleInputChange,
             deleteLastCharacter,
-            clearScreen
+            clearScreen,
+            calculate
         }}>
             { children }
         </CalculatorContext.Provider>

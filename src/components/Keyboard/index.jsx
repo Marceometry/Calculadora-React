@@ -4,14 +4,14 @@ import { InputButton } from './InputButton'
 import StyledKeyboard from './styles'
 
 export function Keyboard() {
-    const { clearScreen, deleteLastCharacter } = useCalculator()
+    const { clearScreen, deleteLastCharacter, calculate } = useCalculator()
 
     return (
         <StyledKeyboard>
             <div className="grid top">
                 <button onClick={clearScreen} className="coloured">C</button>
                 <InputButton className="coloured">/</InputButton>
-                <InputButton className="coloured">x</InputButton>
+                <InputButton className="coloured">*</InputButton>
                 <button onClick={deleteLastCharacter} className="coloured"><Backspace /></button>
             </div>
             
@@ -26,7 +26,7 @@ export function Keyboard() {
                 <InputButton>4</InputButton>
                 <InputButton>5</InputButton>
                 <InputButton>6</InputButton>
-                <InputButton className="coloured">–</InputButton>
+                <InputButton className="coloured">-</InputButton>
             </div>
 
             <div className="grid row">
@@ -39,7 +39,7 @@ export function Keyboard() {
             <div className="grid bottom">
                 <InputButton>.</InputButton>
                 <InputButton>0</InputButton>
-                <button className="coloured">=</button>
+                <button onClick={calculate} className="coloured">=</button>
             </div>
         </StyledKeyboard>
     )
