@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Calculadora React" src="public/images/logo.png" width="30%">
+  Calculadora em React
 </h1>
 
 <p align="center">
