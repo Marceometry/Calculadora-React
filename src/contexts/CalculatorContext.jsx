@@ -10,6 +10,8 @@ export function CalculatorContextProvider({ children }) {
 
     function calculate() {
         const result = handleCalculate(screenValue)
+        if (!result) return
+        
         const newScreenValue = String(result())
         newScreenValue && setScreenValue([...newScreenValue])
     }

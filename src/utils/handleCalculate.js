@@ -1,3 +1,12 @@
 export function handleCalculate(expression) {
-    return Function(`return ${expression.join('')}`)
+    let result
+    
+    try {
+        result = Function(`return ${expression.join('')}`)
+    } catch (error) {
+        alert(error.message)
+        result = null
+    }
+
+    return result
 }
