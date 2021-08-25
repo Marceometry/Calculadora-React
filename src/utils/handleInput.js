@@ -8,7 +8,7 @@ export function handleInput(value, currentValue) {
     const lastCharacter = currentValue[currentValue.length - 1]
 
     if (isNan(value)) {
-        if (isNan(lastCharacter)) return
+        if (isNan(lastCharacter) && !value.includes('-')) return
         if (value !== '.') return [...currentValue, ` ${value} `]
     }
 

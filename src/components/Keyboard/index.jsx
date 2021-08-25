@@ -33,7 +33,7 @@ export function Keyboard() {
                 <InputButton>1</InputButton>
                 <InputButton>2</InputButton>
                 <InputButton>3</InputButton>
-                <InputButton className="coloured">-+</InputButton>
+                <button className="coloured">-+</button>
             </div>
 
             <div className="grid bottom">
